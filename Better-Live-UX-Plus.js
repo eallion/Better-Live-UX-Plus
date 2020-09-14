@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Better Live UX Plus
-// @name:zh-CN     更好的直播体验（最高清晰度、禁弹幕、禁广告、网页全屏）
+// @name:zh-CN     Better Live UX Plus（斗鱼、虎牙、哔哩哔哩、企鹅电竞 自动选择最高清晰度、禁止弹幕、禁止广告、网页全屏。）
 // @namespace      eallion
 // @version        2020.09.15
 // @description    自动选择最高清晰度、禁止弹幕、禁止广告、网页全屏。支持：斗鱼、虎牙、哔哩哔哩、企鹅电竞。
@@ -44,6 +44,8 @@ const config = {
     qq: {
         selectors: [
             'div.vcp-extended-barrage',
+            'div.vcp-extended-set',
+            'div.live-right-chat',
             'a.vcp-vertical-switcher-item-clarity:nth-child(1)',
             'div.vcp-extended-webfullscreen',
         ],
@@ -67,4 +69,11 @@ const site = config[document.domain.split('.').reverse()[1]];
             });
         }, site.timeout || 0);
     });
+})();
+
+(function() {
+    'use strict';
+ if (location.hostname.indexOf("egame.qq.com")>0){
+        document.getElementById("wrap-live").className += " hide-right";
+ }
 })();
