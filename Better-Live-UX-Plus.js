@@ -77,3 +77,11 @@ const site = config[document.domain.split('.').reverse()[1]];
         document.getElementById("wrap-live").className += " hide-right";
  }
 })();
+
+(function() {
+    'use strict';
+ if (location.hostname.indexOf("huya.com")>0){
+        document.getElementById("mode-page-theater").className = "mode-page-full";
+        document.getElementById("room-chat-tool-shield").className += " shield-on";
+ }
+})();
