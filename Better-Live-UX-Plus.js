@@ -8,7 +8,7 @@
 // @run-at         document-idle
 // @noframes
 // @require        https://cdn.jsdelivr.net/npm/jquery
-// @require        https://cdn.jsdelivr.net/gh/eallion/better-live-ux-plus@master/waitForKeyElements.js?version=6349
+// @require        https://greasyfork.org/scripts/2199-waitforkeyelements/code/waitForKeyElements.js?version=6349
 // @match          *://live.bilibili.com/*
 // @match          *://www.douyu.com/*
 // @match          *://www.huya.com/*
