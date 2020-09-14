@@ -37,6 +37,7 @@ const config = {
         selectors: [
             'i.live-icon-danmaku-on',
             'i.live-icon-web-fullscreen',
+            '#aside-area-toggle-btn'
             //'button[data-title="网页全屏"]',
         ],
         timeout: 1500,
