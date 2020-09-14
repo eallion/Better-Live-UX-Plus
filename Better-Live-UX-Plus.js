@@ -2,7 +2,7 @@
 // @name           Better Live UX Plus
 // @name:zh-CN     Better Live UX Plus（斗鱼、虎牙、哔哩哔哩、企鹅电竞 自动选择最高清晰度、禁止弹幕、禁止广告、网页全屏。）
 // @namespace      eallion
-// @version        2020.09.15
+// @version        2020.09.16
 // @description    自动选择最高清晰度、禁止弹幕、禁止广告、网页全屏。支持：斗鱼、虎牙、哔哩哔哩、企鹅电竞。
 // @author         eallion
 // @run-at         document-idle
@@ -84,5 +84,12 @@ const site = config[document.domain.split('.').reverse()[1]];
  if (location.hostname.indexOf("huya.com")>0){
         document.getElementById("mode-page-theater").className = "mode-page-full";
         document.getElementById("room-chat-tool-shield").className += " shield-on";
+ }
+})();
+
+(function() {
+    'use strict';
+ if (location.hostname.indexOf("douyu.com")>0){
+        document.getElementById("is-noChecked").className = "is-checked";
  }
 })();
